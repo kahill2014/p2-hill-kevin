@@ -31,13 +31,29 @@ p {
     font-family: alegreya-sans, sans-serif;
     font-weight: 300;
     font-style: normal;
+    font-size: 1.15rem;
 }
+
+/*** Helper Classes ***/
+.primary-button {
+    background-color: #8cc860;
+    color: #172139;
+    text-decoration: none;
+    padding: .75rem 1rem;
+    font-size: 1.25rem;
+    transition: .15s;
+}
+.primary-button:hover {
+    background-color: rgba(140, 200, 96, .75);
+}
+
 /*** Navigation Bar ***/
 header section.top-nav {
     justify-content: flex-start;
     background-color: #a03323;
     height: 4rem;
     align-items: center;
+    position: relative;
 }
 header section.top-nav img {
     display: flex;
@@ -50,7 +66,7 @@ header section.top-nav img {
 header section.top-nav h1 {
     display: flex;
     justify-content: flex-start;
-    flex-basis: 50%;
+    flex-basis: 55%;
 }
 header section.top-nav nav {
     display: flex;
@@ -74,6 +90,12 @@ header section.top-nav nav ul li a {
     font-size: 1.2rem;
     text-decoration: none;
 }
+header section.top-nav nav ul li a:hover {
+    text-decoration: underline;
+}
+header section.top-nav nav.mobile {
+    display: none;
+}
 
 /*** Banner Image ***/
 header section.banner img {
@@ -84,6 +106,82 @@ header section.banner img {
 .tile {
     padding: 0 1rem;
 }
+.tile h2 {
+    text-align: center;
+}
 .tile img {
     max-width: 100%;
+}
+
+/*** Weather API ***/
+section.weather {
+    background-color: #e3ece6;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+section.weather h2, section.weather #weather-api {
+    width: 100%;
+}
+section.weather h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+section.weather #weather-api {
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#weather-api span, #weather-api img {
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    text-align: center;
+    justify-content: center;
+}
+#weather-api img {
+    max-width: 5rem;
+    height: 5rem;
+}
+#weather-api #city {
+    font-size: 1.5rem;
+}
+#weather-api #weather {
+    margin-bottom: 1rem;
+}
+/*** Footer ***/
+footer {
+    background-color: #172139;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/*** Media Queries ***/
+@media screen and (max-width: 1080px){
+    main {
+        max-width: 85%;
+    }
+    header section.top-nav img{
+        margin-left: 7.5%;
+    }
+    header section.top-nav nav {
+        padding-right: 7.5%;
+    }
+}
+@media screen and (max-width: 720px){
+    header section.top-nav nav.desktop {
+        display: none;
+    }
+    #hamburger {
+        position: absolute;
+        right: 7.5%;
+    }
+    .hamburger-line {
+        width: 35px;
+        height: 4px;
+        background-color: #e3ece6;
+        margin: 7px 0;
+    }
 }

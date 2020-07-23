@@ -14,8 +14,20 @@
 			<section class="top-nav">
 				<img src="img/logo_white.png"/>
 				<h1>Touched By A Paw</h1>
-				<nav>
+				<nav class="desktop">
 					<ul>
+						<li><a href="index.html" class="active">Home</a></li>
+						<li><a href="html/adopt.html">Adopt</a></li>
+						<li><a href="html/faq.html">FAQs</a></li>
+					</ul>
+				</nav>
+				<div id="hamburger">
+					<div class="hamburger-line"></div>
+					<div class="hamburger-line"></div>
+					<div class="hamburger-line"></div>
+				</div>
+				<nav class="mobile">
+					<ul id="mobile-links">
 						<li><a href="index.html" class="active">Home</a></li>
 						<li><a href="html/adopt.html">Adopt</a></li>
 						<li><a href="html/faq.html">FAQs</a></li>
@@ -30,7 +42,7 @@
 			<section class="tile-group">
 				<article class="tile">
 					<h2>Adopt</h2>
-					<img src=""/>
+					<img src="img/girl-and-dog.jpg"/>
 					<p>
 						Lorem ipsum dolor sit amet,
 						consectetur adipiscing elit,sed do
@@ -42,7 +54,7 @@
 				</article>
 				<article class="tile">
 					<h2>Volunteer</h2>
-					<img src=""/>
+					<img src="img/man-and-dog.jpg"/>
 					<p>
 						Lorem ipsum dolor sit amet,
 						consectetur adipiscing elit,sed do
@@ -54,7 +66,7 @@
 				</article>
 				<article class="tile">
 					<h2>Donate</h2>
-					<img src=""/>
+					<img src="img/kitten.jpg"/>
 					<p>
 						Lorem ipsum dolor sit amet,
 						consectetur adipiscing elit,sed do
@@ -65,12 +77,14 @@
 					</p>
 				</article>
 			</section>
-			<section>
+			<section class="weather">
 				<h2>Rain or Shine, we have the perfect pet for you!</h2>
 				<div id="weather-api">
-
+					<img id="icon" src=""/>
+					<span id="city"></span>
+					<span id="weather"></span>
 				</div>
-				<a href="html/adopt.html">Adopt Today</a>
+				<a class="primary-button" href="html/adopt.html">Adopt Today</a>
 			</section>
 		</main>
 		<footer>
