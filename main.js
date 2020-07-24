@@ -39,7 +39,8 @@
     }, false);
 
     // Hide slide-out ad when "Submit" is clicked
-    document.getElementById("submit-ad").addEventListener("click", function(){
+    document.getElementById("submit-ad").addEventListener("click", function(e){
+        e.preventDefault();
         document.getElementById("slide-content").style.backgroundColor = '#8cc860';
         setTimeout(function(){
             document.getElementById("slide-ad").style.width = '0';
@@ -47,7 +48,8 @@
     }, false);
 
     // Hide slide-out ad when "Dismiss" is clicked
-    document.getElementById("dismiss-ad").addEventListener("click", function(){
+    document.getElementById("dismiss-ad").addEventListener("click", function(e){
+        e.preventDefault();
         document.getElementById("slide-ad").style.width = '0';
     }, false);
 
