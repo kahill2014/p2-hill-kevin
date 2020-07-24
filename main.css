@@ -46,6 +46,22 @@ p {
 .primary-button:hover {
     background-color: rgba(140, 200, 96, .75);
 }
+.secondary-button {
+    background-color: #172139;
+    color: #e3ece6;
+    text-decoration: none;
+    padding: .5rem;
+    font-size: .85rem;
+    transition: .15s;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+.secondary-button:hover {
+    background-color: rgba(53, 33, 57, .75)
+}
 
 /*** Navigation Bar ***/
 header section.top-nav {
@@ -151,11 +167,41 @@ section.weather #weather-api {
 #weather-api #weather {
     margin-bottom: 1rem;
 }
+
 /*** Footer ***/
 footer {
     background-color: #172139;
     color: #fff;
     margin-top: 2rem;
+}
+
+#slide-ad {
+    position: fixed;
+    top: 70vh;
+    right: 0;
+    float: right;
+    transition: width 1s ease-out;
+    width: 0;
+    overflow: hidden;
+}
+#slide-content {
+    font-size: 1.5rem;
+    background: #7fb9b4;
+    color: #fff;
+    padding: 1rem;
+    width: 20rem;
+    font-family: alegreya-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#slide-content input {
+    padding: 10px;
+    border: 1px solid rgba(23, 33, 57, .5);
+    margin-top: .75rem;
+    border-radius: 3px;
+}
+#slide-content input:focus {
+    outline: none;
 }
 
 /*** Media Queries ***/
