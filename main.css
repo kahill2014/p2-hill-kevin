@@ -33,6 +33,9 @@ p {
     font-style: normal;
     font-size: 1.15rem;
 }
+a {
+    color: #172139;
+}
 
 /*** Helper Classes ***/
 .primary-button {
@@ -282,6 +285,10 @@ footer {
 #adopt-form a {
     margin: auto;
     border-radius: 3px;
+}
+#adopt-form #thank-you {
+    margin: 2rem auto;
+    display: none;
 }
 
 /*** Media Queries ***/
