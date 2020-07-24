@@ -56,42 +56,37 @@
     }
     
     // Accordion functionality
-    let accTitle = document.getElementsByClassName("faq-heading");
-		let accContent = document.getElementsByClassName("faq-content");
-		let singleMode = true;
-		
-		for( let j=0; j<accContent.length; j++ ){
-			let realHeight = accContent[j].offsetHeight;
-			accContent[j].setAttribute("data-height", realHeight + "px");
-			accContent[j].style.height = 0;
-		}
-		
-		for( let i=0; i<accTitle.length; i++ ){
-			accTitle[i].onclick = function(){
-				let openedAcc = this.getAttribute('href').replace('#', '');
-
-				if( this.classList.contains("active") ){
-					this.classList.remove("active");
-					document.getElementById(openedAcc).style.height = 0;
-					
-					return false;
-				}
-				
-				if( singleMode ){						
-					for(let k=0; k<accTitle.length; k++) {
-						accTitle[k].classList.remove("active");
-					}
-
-					for(let j=0; j<accContent.length; j++) {
-						accContent[j].style.height = 0;
-					}
-				}
-				
-				this.classList.add("active");
-				
-				document.getElementById(openedAcc).style.height = accContent[i].getAttribute("data-height");
-				
-				return false;
-			}
-		}
+    var faqTitle = document.getElementsByClassName("faq-heading");
+    var faqContent = document.getElementsByClassName("faq-content");
+    
+    for(let j = 0; j < faqContent.length; j++){
+        var realHeight = faqContent[j].offsetHeight;
+        faqContent[j].setAttribute("data-height", realHeight + "px");
+        faqContent[j].style.height = 0;
+    }
+    
+    for(let i = 0; i < faqTitle.length; i++){
+        faqTitle[i].onclick = function(){
+            faqItem = this.getAttribute('href').replace('#', '');
+            // Collapse a clicked element if it was already open
+            if(this.classList.contains("active")){
+                this.classList.remove("active");
+                document.getElementById(faqItem).style.height = 0;
+                return false;
+            }
+            
+            // Ensure only one FAQ item is open at a time
+            for(let k = 0; k < faqTitle.length; k++) {
+                faqTitle[k].classList.remove("active");
+            }
+            for(let j = 0; j < faqContent.length; j++) {
+                faqContent[j].style.height = 0;
+            }
+            
+            // Open FAQ item and detect proper height
+            this.classList.add("active");
+            document.getElementById(faqItem).style.height = faqContent[i].getAttribute("data-height");
+            return false;
+        }
+    }
 })();
