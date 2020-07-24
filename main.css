@@ -343,6 +343,13 @@ footer {
     header section.top-nav nav {
         padding-right: 7.5%;
     }
+    header section.banner .banner-overlay {
+        width: 30rem;
+    }
+    header section.banner .banner-overlay h1 {
+        margin: 0 2rem;
+        font-size: 4rem;
+    }
 }
 @media screen and (max-width: 720px){
     header section.top-nav nav.desktop {
@@ -371,6 +378,15 @@ footer {
         padding: 1rem 0;
         transition: .15s;
     }
+    header section.top-nav nav.mobile ul a.active {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        padding: 1rem 0;
+        transition: .15s;
+        background-color: rgba(120, 51, 35, .75);
+    }
     header section.top-nav nav.mobile ul a:hover {
         background-color: rgba(120, 51, 35, .75);
     }
@@ -385,6 +401,13 @@ footer {
         height: 4px;
         background-color: #e3ece6;
         margin: 7px 0;
+    }
+    header section.banner .banner-overlay {
+        width: 20rem;
+    }
+    header section.banner .banner-overlay h1 {
+        margin: 0 1rem;
+        font-size: 3rem;
     }
 }
 
@@ -419,5 +442,32 @@ footer {
     }
     .tile img {
         max-width: 100%;
+    }
+    header section.banner .banner-overlay {
+        width: 100%;
+    }
+    header section.banner .banner-overlay h1 {
+        margin: 0 1rem;
+        font-size: 2.5rem;
+        align-content: flex-end;
+    }
+    #adopt-form .form-group {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+    #adopt-form form {
+        max-width: 85%;
+    }
+    #adopt-form .form-group input {
+        display: flex;
+        flex: 1;
+        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    #adopt-form .form-group textarea {
+        width: 100%;
+        margin-bottom: 2rem;
     }
 }
