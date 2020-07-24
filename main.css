@@ -20,7 +20,7 @@ h1 {
     font-family: alegreya-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: #e3ece6;
+    color: #fff;
 }
 h2 {
     font-family: alegreya-sans, sans-serif;
@@ -139,7 +139,7 @@ header section.banner .banner-overlay {
     background-color: rgba(0, 0, 0, .45)
 }
 header section.banner .banner-overlay h1 {
-    margin-left: 3rem;
+    margin: 0 3rem;
     font-size: 5.5rem;
 }
 
