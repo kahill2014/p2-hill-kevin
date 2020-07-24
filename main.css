@@ -229,6 +229,10 @@ footer {
 #slide-content input:focus {
     outline: none;
 }
+#slide-content #dismiss-ad {
+    font-size: 1rem;
+    margin-left: .25rem;
+}
 
 /*** Adopt form ***/
 #adopt-form {
