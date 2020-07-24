@@ -79,7 +79,12 @@ header section.top-nav img {
     margin-left: 20%;
     margin-right: 1rem;
 }
-header section.top-nav h1 {
+header section.top-nav #logo-text {
+    font-family: alegreya-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #e3ece6;
+    font-size: 1.5rem;
     display: flex;
     justify-content: flex-start;
     flex-basis: 55%;
@@ -114,8 +119,25 @@ header section.top-nav nav.mobile {
 }
 
 /*** Banner Image ***/
+header section.banner {
+    position: relative;
+}
 header section.banner img {
     max-width: 100%;
+}
+header section.banner .banner-overlay {
+    display: flex;
+    flex: 1;
+    position: absolute;
+    align-items: center;
+    left: 0;
+    width: 40rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .45)
+}
+header section.banner .banner-overlay h1 {
+    margin-left: 3rem;
+    font-size: 5.5rem;
 }
 
 /*** Tiles ***/
@@ -175,6 +197,7 @@ footer {
     margin-top: 2rem;
 }
 
+/*** Slide out ad ***/
 #slide-ad {
     position: fixed;
     top: 70vh;
@@ -202,6 +225,63 @@ footer {
 }
 #slide-content input:focus {
     outline: none;
+}
+
+/*** Adopt form ***/
+#adopt-form {
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+#adopt-form h2 {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+}
+#adopt-form .form-group {
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+#adopt-form form {
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    max-width: 75%;
+    flex-wrap: wrap;
+}
+#adopt-form .form-group input {
+    width: 40%;
+    padding: 15px;
+    background-color: rgba(127, 185, 180, .25);
+    border: 1px solid #7fb9b4;
+    color: #333;
+    border-radius: 3px;
+    font-size: 1.15rem;
+    font-family: alegreya-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.15rem;
+}
+#adopt-form .form-group textarea {
+    width: 90%;
+    padding: 15px;
+    background-color: rgba(127, 185, 180, .25);
+    border: 1px solid #7fb9b4;
+    color: #333;
+    border-radius: 3px;
+    font-size: 1.15rem;
+    font-family: alegreya-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.15rem;
+}
+#adopt-form a {
+    margin: auto;
+    border-radius: 3px;
 }
 
 /*** Media Queries ***/
@@ -261,7 +341,7 @@ footer {
 }
 
 @media screen and (max-width: 600px){
-    header section.top-nav h1 {
+    header section.top-nav #logo-text {
         display: none;
     }
     main {
