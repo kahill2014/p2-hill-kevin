@@ -1,7 +1,7 @@
 (function(){
     // Display slide-out ad after 3 seconds
     setTimeout(function(){
-        document.getElementById("slide-ad").style.width = '20rem';
+        document.getElementById("slide-ad").style.width = '18rem';
     }, 3000);
 
     // API to retrieve weather
